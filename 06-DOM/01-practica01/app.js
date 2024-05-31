@@ -23,3 +23,22 @@ botonesColores[0].addEventListener("click",pintarCaja)
 botonesColores[1].addEventListener("click",pintarCaja)
 botonesColores[2].addEventListener("click",pintarCaja)
 botonesColores[3].addEventListener("click",pintarCaja)
+
+
+//cambiar imagen
+const pantallaImg = document.querySelector("#miImagen");
+const btnCambiar = document.querySelector("#btnCambiar");
+
+let estado = 0;
+
+function cambiarImagen(){
+    if (estado == 0){
+        pantallaImg.setAttribute("src", "imagen2.jpg")
+        estado = 1;
+    }else{
+        pantallaImg.setAttribute("src", "imagen.png")
+        estado = 0; 
+    }
+}
+
+btnCambiar.addEventListener("click", cambiarImagen)
